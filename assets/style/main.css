@@ -1,0 +1,190 @@
+* {
+	/* reset CSS */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: white;
+}
+
+h1,
+p {
+	line-height: 3rem;
+	text-align: center;
+}
+
+article {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	margin-top: 20rem;
+}
+
+#big-circle-container {
+	animation: spin 30s linear infinite;
+}
+
+#small-circle-container {
+	animation: spin 20s linear infinite;
+}
+
+#big-circle-container,
+#small-circle-container {
+	position: absolute;
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+	/*transform: translate(-50%, -50%);*/
+	height: 400px;
+	width: 400px;
+}
+
+#big-circle-container > * {
+	position: absolute;
+	top: calc(50% - 250px);
+	left: calc(50% - 125px);
+	transform-origin: 50% 250px;
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+}
+
+#small-circle-container > * {
+	position: absolute;
+	top: calc(50% - 300px);
+	left: calc(50% - 40px);
+	transform-origin: 50% 300px;
+	width: 80px;
+	height: 80px;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.square::after {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	border-radius: 25%;
+	transform: rotate(45deg);
+}
+
+.red {
+	background: rgba(190, 28, 65, 0.75);
+	transform: rotate(45deg);
+}
+
+.orange {
+	background: rgba(235, 67, 35, 0.75);
+	transform: rotate(90deg);
+}
+
+.yellow {
+	background: rgba(233, 124, 32, 0.75);
+	transform: rotate(135deg);
+}
+
+.green {
+	background: rgba(37, 172, 162, 0.75);
+	transform: rotate(180deg);
+}
+
+.blue {
+	background: rgba(16, 63, 236, 0.75);
+	transform: rotate(225deg);
+}
+
+.violet {
+	background: rgba(95, 33, 203, 0.75);
+	transform: rotate(270deg);
+}
+
+.purple {
+	background: rgba(150, 32, 198, 0.75);
+	transform: rotate(315deg);
+}
+
+.pink {
+	background: rgba(208, 57, 159, 0.75);
+	transform: rotate(360deg);
+}
+
+#small-circle-container div:nth-child(2) {
+	background-color: transparent;
+}
+
+#small-circle-container div:nth-child(2)::after {
+	background: rgba(235, 67, 35, 0.75);
+}
+
+#small-circle-container div:nth-child(4) {
+	background-color: transparent;
+}
+
+#small-circle-container div:nth-child(4)::after {
+	background: rgba(37, 172, 162, 0.75);
+}
+
+#small-circle-container div:nth-child(6) {
+	background-color: transparent;
+}
+
+#small-circle-container div:nth-child(6)::after {
+	background: rgba(95, 33, 203, 0.75);
+}
+
+#small-circle-container div:nth-child(8) {
+	background-color: transparent;
+}
+
+#small-circle-container div:nth-child(8)::after {
+	background: rgba(208, 57, 159, 0.75);
+}
+
+#box-container {
+	position: absolute;
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+	height: 400px;
+	width: 400px;
+}
+
+.box {
+	position: absolute;
+	top: calc(50% - 125px);
+	left: calc(50% - 125px);
+	height: 250px;
+	width: 250px;
+	background: rgba(30, 7, 66, 0.65);
+	border-radius: 25%;
+}
+
+.box:first-child {
+	transform: rotate(45deg);
+	animation: spin2 10s linear infinite;
+}
+
+svg {
+	fill: white;
+	width: 100px;
+	display: block;
+	margin: auto;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
